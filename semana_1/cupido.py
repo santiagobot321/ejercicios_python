@@ -23,7 +23,7 @@ for respuesta in range(len(lista)):
     
     if lista[respuesta].lower() == "si":
         contador += 10
-    elif lista[respuesta].lower() == "talvez":
+    elif lista[respuesta].lower() == "tal vez":
         contador += 5    
     else:
         contador -= 3
