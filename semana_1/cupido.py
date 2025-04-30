@@ -27,8 +27,7 @@ for respuesta in range(len(lista)):
         contador += 5    
     else:
         contador -= 3
-        
-        
+              
 if 85 < contador <= 100:
     print("Alma gemela")
 elif 65 < contador <= 84:
