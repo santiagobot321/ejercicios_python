@@ -7,26 +7,26 @@ def agregar():
   for i in range(numanimales):
     name = str(input("Ingresa el nombre del animal: "))
     age = int(input("Ingresa la edad del animal: "))
-    sick = str(input("¿Está enfermo o sano?: ").lower())
+    sick = str(input("¿Está enfermo o sano?: ")).lower()
     nombres.append(name)
     edades.append(age)
     enfermo.append(sick)
   return nombres,edades,enfermo
     
 def eliminar():
-  nameeliminar = input("Esribe el nombre del animal que deseas eliminar: ")
+  nameeliminar = input("\nEscribe el nombre del animal que deseas eliminar: ")
   if nameeliminar in nombres:
     indice = nombres.index(nameeliminar)  
     del nombres[indice]
     del edades[indice]
     del enfermo[indice]
-    print(f"{nameeliminar} ha sido eliminado. La nueva lista es {nombres,edades,enfermo}\n")
+    print(f"\n\033[35m{nameeliminar} ha sido eliminado\033")
   else:
     print(f"\033[31m{nameeliminar} no se encuentra en la lista\033[0m")
   
 def listar():
   for i in range(len(nombres)):
-    print(f"{nombres[i]}, {edades[i]}, {enfermo[i]}")    
+    print(f"\033[34m{nombres[i]}\033[0m | \033[32m{edades[i]}\033[0m | \033[32m{enfermo[i]}\033[0m")    
 
 
 while True:
